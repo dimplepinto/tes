@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    </link>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        /* .banner-wrapper {
+            background-image: url(images/Banner-2.1.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            height: 208px;
+        }
+        .banner-wrapper small{
+            font-size: 14px;
+            font-weight: 300;
+        } */
+        .wrap {
+            background-color: #E9E9E9;
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .relevant-link .card {
+            background-color: #F5F5F5;
+        }
+
+        .relevant-link ul {
+            overflow-y: scroll;
+            height: 232px;
+            margin: 2px;
+        }
+
+        .relevant-link .list-group-item {
+            background-color: unset;
+            border: unset;
+            padding: 9px;
+        }
+
+
+        .relevant-link h6 {
+            font-size: 18px;
+            background: #E4E5E6;
+            width: 90%;
+            padding: 11px 19px;
+            padding: 11px 19px;
+            position: relative;
+            left: -19px;
+
+        }
+
+        .relevant-link .rel-title {
+            color: #0063C3;
+            margin-left: 33px;
+            margin-top: 14px;
+        }
+
+        .relevant-link a {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .relevant-link .bg-icon {
+            background-color: #0063C3;
+            display: flex;
+            /* padding: 7px 11px; */
+            border-radius: 5px;
+            width: 38px;
+            height: 38px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bg-icon .icon {
+            fill: #ffff;
+
+        }
+
+        .relevant-link span {
+            margin-left: 10px;
+            color: #565656;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        /* scroll */
+        #Resources::-webkit-scrollbar-track {
+            width: 5px;
+        }
+
+        #Resources::-webkit-scrollbar {
+            width: 12px;
+
+        }
+
+        #Resources::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            border-left: 4px solid #F5F5F5;
+            border-right: 4px solid #F5F5F5;
+            background-color: #0063C3;
+        }
+
+        /* rl */
+        .relevant-link a {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .relevant-link .bg-icon1 {
+            background-color: #FEDD00;
+            display: flex;
+            /* padding: 7px 11px; */
+            border-radius: 5px;
+            width: 38px;
+            height: 38px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .relevant-link .bg-rel {
+            background-color: #ffff;
+            box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+            margin: 3px;
+            padding: 7px;
+        }
+
+        /* scroll */
+        #Rel::-webkit-scrollbar-track {
+            width: 5px;
+        }
+
+        #Rel::-webkit-scrollbar {
+            width: 12px;
+
+        }
+
+        #Rel::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            border-left:  solid #F5F5F5;
+            border-right:  solid #F5F5F5;
+            background-color: #FEDD00;
+            height: 0;
+        }
+
+        /* network */
+        .relevant-link .bg-icon2 {
+            background-color: #0063C3;
+            display: flex;
+            /* padding: 7px 11px; */
+            border-radius: 5px;
+            width: 38px;
+            height: 38px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bg-icon2 .icon {
+            fill: #ffff;
+
+        }
+
+        /* scroll */
+        #network::-webkit-scrollbar-track {
+            width: 5px;
+        }
+
+        #network::-webkit-scrollbar {
+            width: 12px;
+
+        }
+
+        #network::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            border-left: 4px solid #F5F5F5;
+            border-right: 4px solid #F5F5F5;
+            background-color: #0063C3;
+            height: 0;
+        }
+
+        /* cc */
+        .relevant-link .bg-icon3 {
+            background-color: #840B55;
+            display: flex;
+            /* padding: 7px 11px; */
+            border-radius: 5px;
+            width: 38px;
+            height: 38px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bg-icon3 .icon {
+            fill: #ffff;
+
+        }
+
+        /* scroll */
+        #cc::-webkit-scrollbar-track {
+            width: 5px;
+        }
+
+        #cc::-webkit-scrollbar {
+            width: 12px;
+
+        }
+
+        #cc::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            border-left: 4px solid #F5F5F5;
+            border-right: 4px solid #F5F5F5;
+            background-color: #840B55;
+            height: 0;
+        }
+
+        /********************************** section ann **********************8*/
+
+        .btn-view {
+
+            border: 2px solid #0063C3;
+            border-radius: 25rem;
+            font-size: 13px;
+            font-weight: 500;
+            color: #0063C3;
+            padding: 5px 12px;
+            cursor: pointer;
+        }
+
+        .btn-view .icon {
+            width: 12px;
+            height: 12px;
+            margin-left: 5px;
+            transition: 0.3s;
+        }
+
+        .btn-view:hover .icon {
+            transform: translateX(5px);
+            color: 0063C3;
+        }
+
+        .ann-section .bg {
+            background: #5DD1FF;
+            padding: 11px 19px;
+        }
+
+        .ann-section h6 {
+            font-size: 18px;
+        }
+
+        .ann-section img {
+            border-radius: 12px;
+        }
+
+        .ann-section p {
+            margin: 0;
+            font-size: 16px;
+            color: #151F6D;
+            font-weight: 600;
+            line-height: 1;
+        }
+
+        .ann-section span {
+            font-size: 14px;
+            color: #605D75;
+        }
+
+        .ann-section .border-btm {
+            display: flex;
+            border-bottom: 1px solid #8899AA;
+            padding: 8px 0;
+        }
+
+        /* scroll */
+        .annoucmnt-scroll {
+            overflow-y: scroll;
+            height: 232px;
+            margin: 2px;
+
+        }
+
+        #scrollbar::-webkit-scrollbar-track {
+            width: 5px;
+        }
+
+        #scrollbar::-webkit-scrollbar {
+            width: 12px;
+
+        }
+
+        #scrollbar::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            border-left: 4px solid #F5F5F5;
+            border-right: 4px solid #F5F5F5;
+            background-color: #0063C3;
+            height: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- rel-link -->
+    <div class="wrap">
+        <section class="relevant-link">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="card ">
+                            <h6 class="rel-title">
+                                <svg role="img" class="icon mr-3">
+                                    <use xlink:href="images/CQMSsprite.svg#res-icon"></use>
+                                </svg>Resources
+                            </h6>
+                            <div class="card-body pt-1 px-2 ">
+                                <ul class="list-group list-group-flush" id="Resources">
+                                    <li class="list-group-item">
+                                        <a href="#" title="link-1">
+                                            <div class="bg-icon">
+                                                <svg role="img" class="icon">
+                                                    <use xlink:href="images/CQMSsprite.svg#res-icon"></use>
+                                                </svg>
+                                            </div>
+                                            <span>dolore magnam aliquam </span>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="#" title="link-1">
+                                            <div class="bg-icon">
+                                                <svg role="img" class="icon">
+                                                    <use xlink:href="images/CQMSsprite.svg#res-icon"></use>
+                                                </svg>
+                                            </div>
+                                            <span>dolore magnam aliquam </span>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="#" title="link-1">
+                                            <div class="bg-icon">
+                                                <svg role="img" class="icon">
+                                                    <use xlink:href="images/CQMSsprite.svg#res-icon"></use>
+                                                </svg>
+                                            </div>
+                                            <span>dolore magnam aliquam </span>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="#" title="link-1">
+                                            <div class="bg-icon">
+                                                <svg role="img" class="icon">
+                                                    <use xlink:href="images/CQMSsprite.svg#res-icon"></use>
+                                                </svg>
+                                            </div>
+                                            <span>dolore magnam aliquam </span>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="#" title="link-1">
+                                            <div class="bg-icon">
+                                                <svg role="img" class="icon">
+                                                    <use xlink:href="images/CQMSsprite.svg#res-icon"></use>
+                                                </svg>
+                                            </div>
+                                            <span>dolore magnam aliquam </span>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="#" title="link-1">
+                                            <div class="bg-icon">
+                                                <svg role="img" class="icon">
+                                                    <use xlink:href="images/CQMSsprite.svg#res-icon"></use>
+                                                </svg>
+                                            </div>
+                                            <span>dolore magnam aliquam </span>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="#" title="link-1">
+                                            <div class="bg-icon">
+                                                <svg role="img" class="icon">
+                                                    <use xlink:href="images/CQMSsprite.svg#res-icon"></use>
+                                                </svg>
+                                            </div>
+                                            <span>dolore magnam aliquam </span>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="#" title="link-1">
+                                            <div class="bg-icon">
+                                                <svg role="img" class="icon">
+                                                    <use xlink:href="images/CQMSsprite.svg#res-icon"></use>
+                                                </svg>
+                                            </div>
+                                            <span>dolore magnam aliquam </span>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col-3 -->
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="card ">
+                            <h6 class="rel-title">
+                                <svg role="img" class="icon mr-3">
+                                    <use xlink:href="images/CQMSsprite.svg#insert-link"></use>
+                                </svg>Relevant Link
+                            </h6>
+                            <div class="card-body pt-1 px-2  ">
+                                <ul class="list-group list-group-flush" id="Rel">
+                                    <li class="list-group-item bg-rel">
+                                        <a href="#" title="link-1">
+                                            <div class="bg-icon1">
+                                                <svg role="img" class="icon">
+                                                    <use xlink:href="images/CQMSsprite.svg#insert-link"></use>
+                                                </svg>
+                                            </div>
+                                            <span>dolore magnam aliquam </span>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item bg-rel">
+                                        <a href="#" title="link-1">
+                                            <div class="bg-icon1">
+                                                <svg role="img" class="icon">
+                                                    <use xlink:href="images/CQMSsprite.svg#insert-link"></use>
+                                                </svg>
+                                            </div>
+                                            <span>dolore magnam aliquam </span>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item bg-rel">
+                                        <a href="#" title="link-1">
+                                            <div class="bg-icon1">
+                                                <svg role="img" class="icon">
+                                                    <use xlink:href="images/CQMSsprite.svg#insert-link"></use>
+                                                </svg>
+                                            </div>
+                                            <span>dolore magnam aliquam </span>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item bg-rel">
+                                        <a href="#" title="link-1">
+                                            <div class="bg-icon1">
+                                                <svg role="img" class="icon">
+                                                    <use xlink:href="images/CQMSsprite.svg#insert-link"></use>
+                                                </svg>
+                                            </div>
+                                            <span>dolore magnam aliquam </span>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item bg-rel">
+                                        <a href="#" title="link-1">
+                                            <div class="bg-icon1">
+                                                <svg role="img" class="icon">
+                                                    <use xlink:href="images/CQMSsprite.svg#insert-link"></use>
+                                                </svg>
+                                            </div>
+                                            <span>dolore magnam aliquam </span>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item bg-rel">
+                                        <a href="#" title="link-1">
+                                            <div class="bg-icon1">
+                                                <svg role="img" class="icon">
+                                                    <use xlink:href="images/CQMSsprite.svg#insert-link"></use>
+                                                </svg>
+                                            </div>
+                                            <span>dolore magnam aliquam </span>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item bg-rel">
+                                        <a href="#" title="link-1">
+                                            <div class="bg-icon1">
+                                                <svg role="img" class="icon">
+                                                    <use xlink:href="images/CQMSsprite.svg#insert-link"></use>
+                                                </svg>
+                                            </div>
+                                            <span>dolore magnam aliquam </span>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item bg-rel">
+                                        <a href="#" title="link-1">
+                                            <div class="bg-icon1">
+                                                <svg role="img" class="icon">
+                                                    <use xlink:href="images/CQMSsprite.svg#insert-link"></use>
+                                                </svg>
+                                            </div>
+                                            <span>dolore magnam aliquam </span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col-3 -->
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="card ">
+                            <h6 class="rel-title">
+                                <svg role="img" class="icon mr-3">
+                                    <use xlink:href="images/CQMSsprite.svg#network-icon"></use>
+                                </svg>Network
+                            </h6>
+                            <div class="card-body pt-1 px-2  ">
+                                <ul class="list-group list-group-flush" id="network">
+                                    <li class="list-group-item bg-rel">
+                                        <a href="#" title="link-1">
+                                            <div class="bg-icon2">
+                                                <svg role="img" class="icon">
+                                                    <use xlink:href="images/CQMSsprite.svg#network-icon"></use>
+                                                </svg>
+                                            </div>
+                                            <span>dolore magnam aliquam </span>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item bg-rel">
+                                        <a href="#" title="link-1">
+                                            <div class="bg-icon2">
+                                                <svg role="img" class="icon">
+                                                    <use xlink:href="images/CQMSsprite.svg#network-icon"></use>
+                                                </svg>
+                                            </div>
+                                            <span>dolore magnam aliquam </span>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item bg-rel">
+                                        <a href="#" title="link-1">
+                                            <div class="bg-icon2">
+                                                <svg role="img" class="icon">
+                                                    <use xlink:href="images/CQMSsprite.svg#network-icon"></use>
+                                                </svg>
+                                            </div>
+                                            <span>dolore magnam aliquam </span>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item bg-rel">
+                                        <a href="#" title="link-1">
+                                            <div class="bg-icon2">
+                                                <svg role="img" class="icon">
+                                                    <use xlink:href="images/CQMSsprite.svg#network-icon"></use>
+                                                </svg>
+                                            </div>
+                                            <span>dolore magnam aliquam </span>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item bg-rel">
+                                        <a href="#" title="link-1">
+                                            <div class="bg-icon2">
+                                                <svg role="img" class="icon">
+                                                    <use xlink:href="images/CQMSsprite.svg#network-icon"></use>
+                                                </svg>
+                                            </div>
+                                            <span>dolore magnam aliquam </span>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item bg-rel">
+                                        <a href="#" title="link-1">
+                                            <div class="bg-icon2">
+                                                <svg role="img" class="icon">
+                                                    <use xlink:href="images/CQMSsprite.svg#network-icon"></use>
+                                                </svg>
+                                            </div>
+                                            <span>dolore magnam aliquam </span>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item bg-rel">
+                                        <a href="#" title="link-1">
+                                            <div class="bg-icon2">
+                                                <svg role="img" class="icon">
+                                                    <use xlink:href="images/CQMSsprite.svg#network-icon"></use>
+                                                </svg>
+                                            </div>
+                                            <span>dolore magnam aliquam </span>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item bg-rel">
+                                        <a href="#" title="link-1">
+                                            <div class="bg-icon2">
+                                                <svg role="img" class="icon">
+                                                    <use xlink:href="images/CQMSsprite.svg#network-icon"></use>
+                                                </svg>
+                                            </div>
+                                            <span>dolore magnam aliquam </span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col-3 -->
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="card ">
+                            <h6 class="rel-title">
+                                <svg role="img" class="icon mr-3">
+                                    <use xlink:href="images/CQMSsprite.svg#res-icon"></use>
+                                </svg>Communication Channels
+                            </h6>
+                            <div class="card-body pt-1 px-2 ">
+                                <ul class="list-group list-group-flush" id="cc">
+                                    <li class="list-group-item">
+                                        <a href="#" title="link-1">
+                                            <div class="bg-icon3">
+                                                <strong class="text-white">DS</strong>
+                                            </div>
+                                            <span>dolore magnam aliquam </span>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="#" title="link-1">
+                                            <div class="bg-icon3">
+                                                <strong class="text-white">DS</strong>
+                                            </div>
+                                            <span>dolore magnam aliquam </span>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="#" title="link-1">
+                                            <div class="bg-icon3">
+                                                <strong class="text-white">DS</strong>
+                                            </div>
+                                            <span>dolore magnam aliquam </span>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="#" title="link-1">
+                                            <div class="bg-icon3">
+                                                <strong class="text-white">DS</strong>
+                                            </div>
+                                            <span>dolore magnam aliquam </span>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="#" title="link-1">
+                                            <div class="bg-icon3">
+                                                <strong class="text-white">DS</strong>
+                                            </div>
+                                            <span>dolore magnam aliquam </span>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="#" title="link-1">
+                                            <div class="bg-icon3">
+                                                <strong class="text-white">DS</strong>
+                                            </div>
+                                            <span>dolore magnam aliquam </span>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="#" title="link-1">
+                                            <div class="bg-icon3">
+                                                <strong class="text-white">DS</strong>
+                                            </div>
+                                            <span>dolore magnam aliquam </span>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="#" title="link-1">
+                                            <div class="bg-icon3">
+                                                <strong class="text-white">DS</strong>
+                                            </div>
+                                            <span>dolore magnam aliquam </span>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--------------------------------------------------- announcemnt section -->
+        <section class="ann-section mt-3">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-7 col-md-7 col-12">
+                        <div class="card">
+                            <div class="col-12 my-3">
+                                <div class="bg d-flex">
+                                    <h6>
+                                        <svg role="img" class="icon mr-2">
+                                            <use xlink:href="images/CQMSsprite.svg#icon-announcement"></use>
+                                        </svg>
+                                        Announcement
+                                    </h6>
+                                    <a class="btn btn-view ml-auto" title="view all">view all
+                                        <svg role="img" class="icon">
+                                            <use xlink:href="images/CQMSsprite.svg#arrow-forward"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-body0 pt-">
+                                <div class="row annoucmnt-scroll" id="scrollbar">
+                                    <div class="col-lg-6">
+                                        <div class="border-btm">
+                                            <div class="col-lg-3">
+                                                <img src="images/earth.jpg" class="img-thumbnail">
+                                            </div>
+                                            <div class="col-lg-9 pl-0 ">
+                                                <p>olore magnam aliquam quaerat voluptatem. </p>
+                                                <span>5th jan 2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="border-btm">
+                                            <div class="col-lg-3">
+                                                <img src="images/earth.jpg" class="img-thumbnail">
+                                            </div>
+                                            <div class="col-lg-9 pl-0 ">
+                                                <p>olore magnam aliquam quaerat voluptatem. </p>
+                                                <span>5th jan 2023</span>
+
+                                            </div>
+                                        </div>
+                                        <div class="border-btm">
+                                            <div class="col-lg-3">
+                                                <img src="images/earth.jpg" class="img-thumbnail">
+                                            </div>
+                                            <div class="col-lg-9 pl-0 ">
+                                                <p>olore magnam aliquam quaerat voluptatem. </p>
+                                                <span>5th jan 2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="border-btm">
+                                            <div class="col-lg-3">
+                                                <img src="images/earth.jpg" class="img-thumbnail">
+                                            </div>
+                                            <div class="col-lg-9 pl-0 ">
+                                                <p>olore magnam aliquam quaerat voluptatem. </p>
+                                                <span>5th jan 2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="border-btm">
+                                            <div class="col-lg-3">
+                                                <img src="images/earth.jpg" class="img-thumbnail">
+                                            </div>
+                                            <div class="col-lg-9 pl-0 ">
+                                                <p>olore magnam aliquam quaerat voluptatem. </p>
+                                                <span>5th jan 2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="border-btm">
+                                            <div class="col-lg-3">
+                                                <img src="images/earth.jpg" class="img-thumbnail">
+                                            </div>
+                                            <div class="col-lg-9 pl-0 ">
+                                                <p>olore magnam aliquam quaerat voluptatem. </p>
+                                                <span>5th jan 2023</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- -------------------------col-6------------------------- -->
+                                    <div class="col-lg-6">
+                                        <div class="border-btm">
+                                            <div class="col-lg-3">
+                                                <img src="images/earth.jpg" class="img-thumbnail">
+                                            </div>
+                                            <div class="col-lg-9 pl-0 ">
+
+                                                <p>olore magnam aliquam quaerat voluptatem. </p>
+                                                <span>5th jan 2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="border-btm">
+                                            <div class="col-lg-3">
+                                                <img src="images/earth.jpg" class="img-thumbnail">
+                                            </div>
+                                            <div class="col-lg-9 pl-0 ">
+
+                                                <p>olore magnam aliquam quaerat voluptatem. </p>
+                                                <span>5th jan 2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="border-btm">
+                                            <div class="col-lg-3">
+                                                <img src="images/earth.jpg" class="img-thumbnail">
+                                            </div>
+                                            <div class="col-lg-9 pl-0 ">
+
+                                                <p>olore magnam aliquam quaerat voluptatem. </p>
+                                                <span>5th jan 2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="border-btm">
+                                            <div class="col-lg-3">
+                                                <img src="images/earth.jpg" class="img-thumbnail">
+                                            </div>
+                                            <div class="col-lg-9 pl-0 ">
+                                                <p>olore magnam aliquam quaerat voluptatem. </p>
+                                                <span>5th jan 2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="border-btm">
+                                            <div class="col-lg-3">
+                                                <img src="images/earth.jpg" class="img-thumbnail">
+                                            </div>
+                                            <div class="col-lg-9 pl-0 ">
+                                                <p>olore magnam aliquam quaerat voluptatem. </p>
+                                                <span>5th jan 2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="border-btm">
+                                            <div class="col-lg-3">
+                                                <img src="images/earth.jpg" class="img-thumbnail">
+                                            </div>
+                                            <div class="col-lg-9 pl-0 ">
+                                                <p>olore magnam aliquam quaerat voluptatem. </p>
+                                                <span>5th jan 2023</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-12">
+                        yammer
+                    </div>
+                </div>
+            </div>
+    </div>
+    </section>
+    </div>
+</body>
+
+</html>
